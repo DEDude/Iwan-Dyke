@@ -1,22 +1,26 @@
 <svg width="100%" viewBox="0 0 680 190" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <style>
-    .bg { fill: #0d1117; }
-    .divider { stroke: #21262d; stroke-width: 0.5; }
-    .prompt { font-family: monospace; font-size: 14px; fill: #484f58; }
-    .path { font-family: monospace; font-size: 14px; fill: #3b8eea; }
-    .name { font-family: monospace; font-size: 32px; font-weight: 700; fill: #79c0ff; letter-spacing: 1px; }
-    .cursor-rect { fill: #79c0ff; }
-    .role { font-family: monospace; font-size: 13px; fill: #8b949e; }
-    .tag-bg-b { fill: #1f3d5c; }
-    .tag-text-b { font-family: monospace; font-size: 11px; fill: #79c0ff; }
-    .tag-bg-g { fill: #1a3028; }
-    .tag-text-g { font-family: monospace; font-size: 11px; fill: #56d364; }
-    .tag-bg-p { fill: #2d1f4e; }
-    .tag-text-p { font-family: monospace; font-size: 11px; fill: #d2a8ff; }
-    .tag-bg-n { fill: #21262d; }
-    .tag-text-n { font-family: monospace; font-size: 11px; fill: #8b949e; }
+    .bg { fill: #020604; }
+    .divider { stroke: #0f3d24; stroke-width: 0.5; }
+    .prompt { font-family: monospace; font-size: 14px; fill: #1f6b3f; }
+    .path { font-family: monospace; font-size: 14px; fill: #2fae63; }
+    .name { font-family: monospace; font-size: 32px; font-weight: 700; fill: #3dff81; letter-spacing: 1px; }
+    .cursor-rect { fill: #3dff81; }
+    .role { font-family: monospace; font-size: 13px; fill: #2fae63; }
+    .tag-bg-b { fill: #06301c; }
+    .tag-text-b { font-family: monospace; font-size: 11px; fill: #3dff81; }
+    .tag-bg-g { fill: #04231480; }
+    .tag-text-g { font-family: monospace; font-size: 11px; fill: #2fae63; }
+    .tag-bg-p { fill: #0a4a2b; }
+    .tag-text-p { font-family: monospace; font-size: 11px; fill: #7dffb0; }
+    .tag-bg-n { fill: #0f3d24; }
+    .tag-text-n { font-family: monospace; font-size: 11px; fill: #1f6b3f; }
   </style>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="0.6" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
 </defs>
 <rect width="680" height="190" class="bg" rx="6"/>
 <line x1="40" y1="40" x2="640" y2="40" class="divider"/>
@@ -26,7 +30,7 @@
 <text class="path" x="246" y="30">main</text>
 <text class="prompt" x="40" y="72">❯</text>
 <text class="path" x="60" y="72">whoami</text>
-<text class="name" x="40" y="110">Iwan Dyke</text>
+<text class="name" x="40" y="110" filter="url(#glow)">Iwan Dyke</text>
 <rect class="cursor-rect" x="262" y="90" width="18" height="28" rx="1"/>
 <text class="role" x="40" y="135">Data &amp; platform engineer  ·  ~8 years  ·  UK</text>
 <rect x="40" y="160" width="86" height="20" rx="10" class="tag-bg-b"/>
